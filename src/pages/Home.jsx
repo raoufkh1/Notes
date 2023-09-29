@@ -48,7 +48,7 @@ const Home = () => {
     console.log(index);
   };
   useEffect(() => {
-    if (notes.length > 0) {
+    if (notes?.length > 0) {
       localStorage.setItem("notes", JSON.stringify(notes));
     }
   }, [notes]);
