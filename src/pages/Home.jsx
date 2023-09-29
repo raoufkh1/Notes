@@ -57,7 +57,7 @@ const Home = () => {
       <div className="container">
         <h1>Sticky Notes App</h1>
         <div className="sticky-notes">
-          {notes?.length > 0 &&
+          {notes &&
             notes.map((note, index) => {
               return (
                 <div className="sticky-note" key={note.id} id={note.id}>
