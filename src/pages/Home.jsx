@@ -13,7 +13,13 @@ const Home = () => {
       id: Math.round(Math.random() * 100000),
       content: "",
     };
-    setNotes((prev) => [...prev, note]);
+    setNotes((prev) => {
+      if (prev) {
+        return [...prev, note];
+      } else {
+        return [note];
+      }
+    });
     console.log(notes);
   };
   const getNote = (element) => {
